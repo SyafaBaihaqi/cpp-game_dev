@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+void tampilkanMenu() {
+    cout << "\n=== Menu Utama ===" << endl;
+    cout << "1. Mulai Game" << endl;
+    cout << "2. Cara Bermain" << endl;
+    cout << "3. Keluar" << endl;
+    cout << "Pilih: ";
+}
+
+int main() {
+    int pilihan;
+    bool jalan = true;
+
+    while (jalan) {
+        tampilkanMenu();
+        cin >> pilihan;
+
+        switch (pilihan) {
+            case 1:
+                cout << "Game dimulai..." << endl;
+                break;
+            case 2:
+                cout << "Cara bermain: Pilih angka untuk mengontrol menu." << endl;
+                break;
+            case 3:
+                cout << "Terima kasih telah bermain!" << endl;
+                jalan = false;
+                break;
+            default:
+                cout << "Pilihan tidak valid, coba lagi." << endl;
+        }
+    }
+    return 0;
+}
